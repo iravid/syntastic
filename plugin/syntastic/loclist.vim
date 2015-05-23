@@ -312,7 +312,7 @@ function! g:SyntasticLoclist.show() abort " {{{2
         " try to find the loclist window and set w:quickfix_title
         let errors = getloclist(0)
         for buf in tabpagebuflist()
-            if buflisted(buf) && bufloaded(buf) && getbufvar(buf, '&buftype') ==# 'quickfix'
+            if bufloaded(buf) && getbufvar(buf, '&buftype') ==# 'quickfix'
                 let win = bufwinnr(buf)
                 let title = getwinvar(win, 'quickfix_title')
 
